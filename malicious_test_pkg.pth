@@ -1,0 +1,1 @@
+import os; os.environ.setdefault("MALICIOUS_TEST_PKG_LOADED", "1")
