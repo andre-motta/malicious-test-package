@@ -10,7 +10,7 @@ Every file in this repo contains intentionally suspicious patterns (base64 paylo
 
 ## Purpose
 
-The AIPCC pipeline runs a security audit (hexora static analysis + git history scan) before allowing any Python package to be onboarded into Red Hat's AI distribution. This repo provides a stable, reliably-detectable test target for integration tests of that security gate.
+The ai-helpers pipeline runs a security audit (hexora static analysis + git history scan) before allowing any Python package to be onboarded into Red Hat's AI distribution. This repo provides a stable, reliably-detectable test target for integration tests of that security gate.
 
 ## What's in here
 
