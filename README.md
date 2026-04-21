@@ -2,7 +2,7 @@
 
 > **WARNING: THIS IS A TEST FIXTURE — NOT A REAL PACKAGE**
 
-This repository contains a deliberately suspicious Python package designed to trigger security vulnerability scanners. It exists solely as a test fixture for the [AIPCC Package Onboarding](https://gitlab.com/redhat/rhel-ai/core/package-onboarding) pipeline's security audit gate.
+This repository contains a deliberately suspicious Python package designed to trigger security vulnerability scanners. It exists solely as a test fixture for the ai-helpers pipeline's security audit gate.
 
 **This package is NOT published to PyPI and must NEVER be installed or executed.**
 
